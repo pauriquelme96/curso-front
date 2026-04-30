@@ -103,7 +103,14 @@ Ejecuta una función por cada elemento. **No devuelve nada** (retorna `undefined
 
 ```ts
 const nombres = ["Ana", "Luis", "Marta"];
-nombres.forEach((nombre) => console.log(nombre));
+
+function saludar() {
+  console.log;
+}
+
+saludar("Ana"); // Ana
+
+nombres.forEach(() => console.log);
 ```
 
 > `forEach` no se puede interrumpir con `break` ni `return`. Si necesitas salir antes, usa `for...of`.
@@ -114,7 +121,12 @@ Transforma cada elemento y **devuelve un nuevo array**.
 
 ```ts
 const numeros = [1, 2, 3, 4];
-const dobles = numeros.map((n) => n * 2);
+
+function porDos(n) {
+  return n * 2;
+}
+
+const dobles = numeros.map(porDos);
 // [2, 4, 6, 8]
 ```
 
@@ -124,7 +136,10 @@ Filtra elementos según una condición y **devuelve un nuevo array**.
 
 ```ts
 const edades = [15, 22, 8, 30, 17];
-const mayores = edades.filter((edad) => edad >= 18);
+
+const mayores = edades.filter((edad) => {
+  edad >= 18;
+});
 // [22, 30]
 ```
 
